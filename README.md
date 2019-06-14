@@ -1,3 +1,7 @@
+Cria um cluster da aplicação listavip (https://github.com/topicos-sistemas-distribuidos/app-crud-data.git)
+
+O cluster tem 2 nós sendo um nó do servidor de aplicação e outro nó do banco de dados. 
+
 1. Faça um docker compose para buidar as imagens necessarias
 
 $ docker-compose build
