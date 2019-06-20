@@ -9,7 +9,7 @@ services:
             MYSQL_ROOT_PASSWORD: skyinfo
             MYSQL_DATABASE: listavip
         ports:
-            - '3306:3306'
+            - '3306'
         expose:
             # Opens port 3306 on the container
             - '3306'
