@@ -12,7 +12,6 @@ services:
         depends_on: 
           - "app1"
           - "app2"
-          - "app3"  
     mydb:
         image: mysql:5.6
         hostname: mydb
@@ -56,20 +55,6 @@ services:
             - my-app-network
         depends_on:
             - "mydb"
-    app3:
-        build:
-            dockerfile: ./docker/app-server.dockerfile
-            context: .
-        image: armandoss/app-server
-        container_name: app-server-3
-        ports:
-            - "8083:8083"
-        command: mvn clean spring-boot:run -Drun.jvmArguments='-Dserver.port=8083'
-        networks: 
-            - my-app-network
-        depends_on:
-            - "mydb"
-
 networks: 
     my-app-network:
         driver: bridge
