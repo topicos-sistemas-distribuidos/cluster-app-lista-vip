@@ -15,9 +15,3 @@ WORKDIR /root/app-crud-data
 
 # set environment variable
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-
-COPY /docker/commands.sh /root/app-crud-data/commands.sh
-RUN ["chmod", "+x", "/root/app-crud-data/commands.sh"]
-ENTRYPOINT ["/root/app-crud-data/commands.sh"]
-
-EXPOSE 8080
